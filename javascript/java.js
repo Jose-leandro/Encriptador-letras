@@ -24,7 +24,7 @@ function criptografar(textcrip) {
 	 
 	for(var i=0; i < textarea.length; i++) {
 		if(textcrip.includes(textarea)) {
-		textcrip = textcrip.replace("a", "mxb");
+		textcrip = textcrip.replace("u", "mxb");
 
 		textcrip = textcrip.replaceAll("r", "gqt");
 	
@@ -62,7 +62,7 @@ function descriptografar(textdescrip) {
 
 	for(var i=0; i < textareadescrip.length; i++) {
 		if(textdescrip.includes(textareadescrip)) {
-			textdescrip = textdescrip.replace("mxb", "a");
+			textdescrip = textdescrip.replace("mxb", "u");
 	
 			textdescrip = textdescrip.replaceAll("gqt", "r");
 		
@@ -70,7 +70,7 @@ function descriptografar(textdescrip) {
 	
 			textdescrip = textdescrip.replaceAll("wyz", "i");
 		
-			textdescrip = textdescrip.replaceAll("lnt", "e");
+			textdescrip = textdescrip.replaceAll("jnt", "e");
 		
 			textdescrip = textdescrip.replaceAll("hus", "o");
 		}
