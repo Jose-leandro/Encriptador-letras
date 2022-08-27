@@ -70,7 +70,7 @@ function descriptografar(textdescrip) {
 	
 			textdescrip = textdescrip.replaceAll("wyz", "i");
 		
-			textdescrip = textdescrip.replaceAll("jnt", "e");
+			textdescrip = textdescrip.replaceAll("lnt", "e");
 		
 			textdescrip = textdescrip.replaceAll("hus", "o");
 		}
