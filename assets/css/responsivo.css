@@ -1,0 +1,23 @@
+@media screen and (max-width: 700px) {
+    .main__campo {
+        height: 2000px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+    .iconeInformacao {
+        left: 4em;
+        position: absolute;
+        top: 30em;
+    }
+
+        
+    .campo_erro {
+        position: absolute;
+        top: 27em;
+        font-size: 18px;
+        color: #fd0d41;
+    }
+}

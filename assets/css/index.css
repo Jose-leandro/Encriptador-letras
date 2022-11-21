@@ -1,0 +1,226 @@
+.body__encriptador {
+	background-image: linear-gradient(102.4deg, rgba(253, 189, 85, 1) 7.8%, rgba(249, 131, 255, 1) 100.3%);
+}
+
+.header__titulo {
+	color: #793c49;
+	font-family: 'Oswald', sans-serif;
+	font-size: 80px;
+	margin-top: 5px;
+	position: absolute;
+	right: 380px;
+}
+
+.titulo__criptografando[] {
+
+}
+
+.logo__a {
+	color: #7b68ee;
+	font-family: 'Oswald', sans-serif;
+	font-size: 100px;
+	font-weight: bold;
+	left: 10px;
+	position: absolute;
+}
+
+.logo__lmxbgqta {
+	color: #1b0b53;
+	display: inline-block;
+	font-family: 'Oswald', sans-serif;
+	font-size: 25px;
+	font-weight: bold;
+	left: 55px;
+	position: absolute;
+	top: 60px;
+}
+
+.main__campo {
+	align-items: center;
+	display: flex;
+	height: 750px;
+	justify-content: space-around;
+	width: 100%;
+}
+
+.campo__criptografar {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	height: 80%;
+	justify-content: space-evenly;
+}
+
+.criptografar__input {
+	background: transparent;
+	border-color: #2110be;
+	border-radius: 15px;
+	border: solid 1px;
+	height: 300px;
+	margin-bottom: 2em;
+	margin-top: 3em;
+	width: 400px;
+}
+
+.criptografar__input::placeholder {
+	color: #2b2a2a;
+	font-size: 20px;
+	font-weight: bold;
+	position: absolute;
+	text-align: center;
+	top: 100px;
+}
+
+.iconeInformacao {
+	height: 24px;
+	left: 4em;
+	position: absolute;
+	top: 40em;
+	width: 24px;
+}
+
+.criptografar__btn {
+	background-color: writer;
+	background: #483D8B;
+	border-radius: 15px;
+	border: 10px;
+	color: #ffffff;
+	font-size: 15px;
+	height: 40px;
+	padding: 2px;
+	width: 120px;
+}
+
+.criptografar__btn:hover {
+	font-size: 16px;
+	height: 42px;
+	width: 122px;
+}
+
+.criptografar__btn:active {
+	font-size: 14px;
+	height: 39px;
+	width: 119px;
+}
+
+.campo__descriptografar {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	height: 80%;
+	justify-content: space-evenly;
+}
+
+.descriptografar__input {
+	background: transparent;
+	border-color: #2110be;
+	border-radius: 15px;
+	border: solid 1px;
+	height: 300px;
+	margin-bottom: 2em;
+	margin-top: 3em;
+	width: 400px;
+}
+
+.descriptografar__input::placeholder {
+	color: #2b2503;
+	font-size: 20px;
+	font-weight: bold;
+	position: absolute;
+	text-align: center;
+	top: 100px;
+}
+
+.descriptografar__btn {
+	background-color: writer;
+	background: #483D8B;
+	border-radius: 15px;
+	border: 10px;
+	color: #ffffff;
+	font-size: 15px;
+	height: 40px;
+	padding: 2px;
+	width: 120px;
+}
+
+.descriptografar__btn:hover {
+	font-size: 16px;
+	height: 42px;
+	width: 122px;
+}
+
+.descriptografar__btn:active {
+	font-size: 14px;
+	height: 39px;
+	width: 119px;
+}
+
+.campo_resultados {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	height: 80%;
+	justify-content: space-evenly;
+}
+
+.resultados_input {
+	background-color: transparent;
+	background-image: url("/assets/img/projetoone.png");
+	background-position: 100%;
+	background-repeat: no-repeat;
+	border-color: #2110be;
+	border-radius: 15px;
+	border: solid 1px;
+	height: 300px;
+	margin-bottom: 2em;
+	margin-top: 3em;
+	width: 300px;
+}
+
+.areaDetransferencia {
+	background-image: none;
+}
+
+.resultados_btn {
+	background: #483D8B;
+	border-radius: 15px;
+	border: 10px;
+	color: #ffffff;
+	font-size: 15px;
+	height: 40px;
+	padding: 2px;
+	width: 80px;
+}
+
+.resultados_btn:hover {
+	font-size: 16px;
+	height: 42px;
+	width: 81px;
+}
+
+.resultados_btn:active {
+	font-size: 14px;
+	height: 39px;
+	width: 79px;
+}
+
+.campo_erro {
+	position: absolute;
+	top: 38em;
+	font-size: 18px;
+	color: #fd0d41;
+}
+
+footer {
+	background-image: linear-gradient(102.4deg, rgba(253, 189, 85, 1) 7.8%, rgba(249, 131, 255, 1) 100.3%);
+	height: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	width: 100%;
+}
+
+.desenvolvedor {
+	color: #ff4;
+}

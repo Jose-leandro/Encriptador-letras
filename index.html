@@ -1,75 +1,71 @@
-<DOCTYPE  html>
-<html lang="pt-br">
+<DOCTYPE html>
+	<html lang="pt-br">
+
 	<head>
 		<meta charset="UTF-8">
 		<title>elucidando um desafio</title>
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css\index.css">
+	    <link rel="icon" href="assets/imagens/aviso.png" type="image/x-icon">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="assets/css/normalize.css">
+		<link rel="stylesheet" href="assets/css/reset.css">
+		<link rel="stylesheet" href="assets/css/index.css">
+		<link rel="stylesheet" href="assets/css/animacoes.css">
+		<link rel="stylesheet" href="assets/css/responsivo.css">
 		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		<link rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
-		</head>
-	<body class="papeldeparede">
-		<header>
-			<p id="titulo">criptografando algo</p>
-			<p id="adealura">a</p>
-			<p class="lugrtadealura">lmxbgqta</p>
+	</head>
+
+	<body class="body__encriptador">
+		<header class="encriptador__header">
+			<div class="header__titulo">
+				<p class="titulo__criptografando">criptografando algo</p>
+			</div>
+			<div class="header__logo">
+				<p class="logo__a">a</p>
+				<p class="logo__lmxbgqta">lmxbgqta</p>
+			</div>
 		</header>
-		<main>
-			<img class="imagem" src="imagem\projetoone.png">
-			<div class="decoration"> 
-				<p>h</p>
-				<p>u</p>
-				<p>s</p>
-				<p>n</p>
-				<p>j</p>
-				<p>n</p>
-				<p>t</p>
-			</div>
-			<div class="segdecoration">
-				<p>h</p>
-				<p>u</p>
-				<p>s</p>
-				<p>n</p>
-				<p>j</p>
-				<p>n</p>
-				<p>t</p>
-			</div>
-			<p class="infor">nenhuma mensagem foi detectado</p>
-			<p class="seginfor">por favor digite <br> nos campos para ser criptografado/descriptografado</p>
-			<form>
-				<div>
-					<textarea type="text" name="cript"  class="textarea"  placeholder="Digite seu algo para que posar ser criptografado"></textarea>
+		<main class="encriptador__main">
+			<div class="main__campo">
+				<div class="campo__criptografar">
+					<input type="text" class="criptografar__input"
+						placeholder="Digite seu algo para que posar ser criptografado"
+						data-tipo="criptografar" ></input>
 
-					<textarea type="text" name="desc" class="segundotextarea"  placeholder="Digite algo para que posar ser descriptografado"></textarea>
+					<button class="criptografar__btn" onclick="acoesQueOcorreQuandoClicadoNoBntCriptografar()">criptografar</button>
 
-					<textarea class="terceirotextarea"></textarea>
-						
-					<button class="botao1" onclick="colar()">
-						<p>colar</p>
-					</button>
-			
-					<button class="botao2" onclick="clicarbotaodes()">
-						<p>descriptografar</p>
-					</button>
-
-					<button  class="botao3" onclick="clicarbotaocrip()">
-						<p>criptografar</p>
-					</button> 
 				</div>
-			</form>
-			<h1 class="permissao">permitido apenas letras minúscula</h1>
-			<span class="material-symbols-outlined">
-				info
-			</span>
-		</main>
-       	<footer>             
-    		<p class="criador">&copy; Construido e desenvolvido por josé leandro do nascimento</p>
-		</footer>
-	</body>	
-</html>
 
-<script src="javascript/java.js"></script>
+				<img  src="assets/img/aviso.png" class="iconeInformacao">
+
+				<div class="campo__descriptografar">
+					<input type="text" class="descriptografar__input"
+						placeholder="Digite algo para que posar ser descriptografado"
+						data-tipo="descriptografar"></input>
+
+						<button class="descriptografar__btn" onclick="acoesQueOcorreQuandoClicadoNoBntDescriptografar()">descriptografar</button>
+				</div>
+				<div class="campo_resultados">
+					<input class="resultados_input" disabled></input>
+
+					<button class="resultados_btn" >colar</button>
+				</div>
+
+				<span class="campo_erro"></span>
+
+			</div>
+
+		</main>
+		<footer>
+			<p class="desenvolverdor">&copy; Construido e desenvolvido por josé leandro do nascimento 2022</p>
+		</footer>
+	</body>
+
+	</html>
+
+	<script src="assets/javaScript/index.js"></script>
