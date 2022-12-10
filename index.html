@@ -1,71 +1,70 @@
-<DOCTYPE html>
-	<html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-br">
 
-	<head>
-		<meta charset="UTF-8">
-		<title>elucidando um desafio</title>
-	    <link rel="icon" href="assets/imagens/aviso.png" type="image/x-icon">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="assets/css/normalize.css">
-		<link rel="stylesheet" href="assets/css/reset.css">
-		<link rel="stylesheet" href="assets/css/index.css">
-		<link rel="stylesheet" href="assets/css/animacoes.css">
-		<link rel="stylesheet" href="assets/css/responsivo.css">
-		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
-		<link rel="stylesheet"
-			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-		<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
-	</head>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>elucidando um desafio</title>
+	<link rel="icon" type="imagem/png" href="assets/img/encript.png" />
+	<link rel="stylesheet" href="assets/css/normalize.css">
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<link rel="stylesheet" href="assets/css/index.css">
+	<link rel="stylesheet" href="assets/css/animacoes.css">
+	<link rel="stylesheet" href="assets/css/responsivo.css">
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+</head>
 
-	<body class="body__encriptador">
-		<header class="encriptador__header">
-			<div class="header__titulo">
-				<p class="titulo__criptografando">criptografando algo</p>
+<body>
+	<header>
+		<div class="header__titulo">
+			<p>criptografando algo</p>
+		</div>
+	</header>
+	<main>
+		<div class="main__erros">
+			<img src="assets/img/aviso.png" class="erros__icone"></img>
+			<span class="erros__descricao"></span>
+		</div>
+		<div class="popup__copiar">
+			<div>
+				<h1 class="copiar__fechar">x</h1>
+				<p>Copiado com sucesso</p>
 			</div>
-			<div class="header__logo">
-				<p class="logo__a">a</p>
-				<p class="logo__lmxbgqta">lmxbgqta</p>
-			</div>
-		</header>
-		<main class="encriptador__main">
-			<div class="main__campo">
-				<div class="campo__criptografar">
-					<input type="text" class="criptografar__input"
-						placeholder="Digite seu algo para que posar ser criptografado"
-						data-tipo="criptografar" ></input>
-
-					<button class="criptografar__btn" onclick="acoesQueOcorreQuandoClicadoNoBntCriptografar()">criptografar</button>
-
-				</div>
-
-				<img  src="assets/img/aviso.png" class="iconeInformacao">
-
-				<div class="campo__descriptografar">
-					<input type="text" class="descriptografar__input"
-						placeholder="Digite algo para que posar ser descriptografado"
-						data-tipo="descriptografar"></input>
-
-						<button class="descriptografar__btn" onclick="acoesQueOcorreQuandoClicadoNoBntDescriptografar()">descriptografar</button>
-				</div>
-				<div class="campo_resultados">
-					<input class="resultados_input" disabled></input>
-
-					<button class="resultados_btn" >colar</button>
-				</div>
-
-				<span class="campo_erro"></span>
+		</div>
+		<div class="main__campo">
+			<div class="campo__criptografar">
+				<input type="text" class="criptografar__input" placeholder="Digite algo para ser criptografado"
+					data-tipo="criptografar"></input>
+				<button class="criptografar__btn"
+					onclick="acoesQueOcorreQuandoClicadoNoBntCriptografar()">Criptografar</button>
 
 			</div>
+			<div class="campo__descriptografar">
+				<input type="text" class="descriptografar__input" placeholder="Digite algo para ser descriptografado"
+					data-tipo="descriptografar"></input>
 
-		</main>
-		<footer>
-			<p class="desenvolverdor">&copy; Construido e desenvolvido por josé leandro do nascimento 2022</p>
-		</footer>
-	</body>
+				<button class="descriptografar__btn"
+					onclick="acoesQueOcorreQuandoClicadoNoBntDescriptografar()">Descriptografar</button>
+			</div>
+			<div class="campo_resultados">
+				<input class="resultados_input" disabled></input>
 
-	</html>
+				<button class="resultados_btn" onclick="copiarParaAreaDeTransferencia()">copiar</button>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<p>&copy; Construido e desenvolvido por josé leandro do nascimento 2022</p>
+		<p><a href="direitosAutorais.html">Uso de imagens e Icones</a></p>
+	</footer>
+</body>
 
-	<script src="assets/javaScript/index.js"></script>
+</html>
+
+<script src="assets/javaScript/index.js"></script>

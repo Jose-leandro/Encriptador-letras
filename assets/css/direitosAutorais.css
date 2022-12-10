@@ -1,0 +1,36 @@
+body {
+    background: #131722;
+    color: #fff;
+}
+
+.header__titulo p {
+    font-size: 20px;
+    height: 100px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+main {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    justify-content: space-evenly;
+}
+
+.main__imagem {
+    display: flex;
+}
+
+.main__imagem img {
+    margin-right: 2em;
+}
+
+.main__imagem a {
+    color: #fff;
+}
+
+footer {
+    height: 100px;
+    text-align: center;
+}

@@ -1,61 +1,84 @@
-.body__encriptador {
-	background-image: linear-gradient(102.4deg, rgba(253, 189, 85, 1) 7.8%, rgba(249, 131, 255, 1) 100.3%);
+body {
+	background: #131722;
+	color: #fff;
 }
 
 .header__titulo {
+	height: 100px;
+}
+
+.header__titulo p {
 	color: #793c49;
 	font-family: 'Oswald', sans-serif;
-	font-size: 80px;
-	margin-top: 5px;
-	position: absolute;
-	right: 380px;
+	margin-top: 25px;
+	text-align: center;
 }
 
-.titulo__criptografando[] {
-
-}
-
-.logo__a {
-	color: #7b68ee;
-	font-family: 'Oswald', sans-serif;
-	font-size: 100px;
-	font-weight: bold;
-	left: 10px;
-	position: absolute;
-}
-
-.logo__lmxbgqta {
-	color: #1b0b53;
-	display: inline-block;
-	font-family: 'Oswald', sans-serif;
-	font-size: 25px;
-	font-weight: bold;
-	left: 55px;
-	position: absolute;
-	top: 60px;
-}
-
-.main__campo {
+.main__erros {
 	align-items: center;
 	display: flex;
-	height: 750px;
-	justify-content: space-around;
-	width: 100%;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 2em;
+}
+
+.erros__icone {
+	height: 24px;
+	visibility: hidden;
+	width: 24px;
+}
+
+.erros__descricao {
+	background: #382327;
+	border-radius: 10px;
+	color: #ffffff;
+	font-size: 16px;
+	height: 50px;
+	margin-left: 3em;
+	padding-top: 25px;
+	text-align: center;
+	visibility: hidden;
+	width: 500px;
+}
+
+.popup__copiar {
+	display: flex;
+	justify-content: end;
+	margin-right: 200px;
+	visibility: hidden;
+}
+
+.popup__copiar div {
+	background-color: #26614d;
+	border-radius: 5px;
+	color: #fff;
+	height: 50px;
+	text-align: center;
+	width: 200px;
+}
+
+.popup__copiar h1 {
+	cursor: pointer;
+	font-size: 20px;
+	height: 15px;
+	padding-right: 8px;
+	padding-top: 4px;
+	text-align: end;
 }
 
 .campo__criptografar {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	height: 80%;
-	justify-content: space-evenly;
+	justify-content: space-around;
 }
 
 .criptografar__input {
-	background: transparent;
-	border-color: #2110be;
+	background: #252424;
 	border-radius: 15px;
-	border: solid 1px;
+	border: solid 1px #504d4d;
+	color: #c2bebe;
+	font-size: 17px;
 	height: 300px;
 	margin-bottom: 2em;
 	margin-top: 3em;
@@ -63,20 +86,10 @@
 }
 
 .criptografar__input::placeholder {
-	color: #2b2a2a;
-	font-size: 20px;
-	font-weight: bold;
+	color: #fff;
 	position: absolute;
 	text-align: center;
-	top: 100px;
-}
-
-.iconeInformacao {
-	height: 24px;
-	left: 4em;
-	position: absolute;
-	top: 40em;
-	width: 24px;
+	top: 130px;
 }
 
 .criptografar__btn {
@@ -85,20 +98,18 @@
 	border-radius: 15px;
 	border: 10px;
 	color: #ffffff;
-	font-size: 15px;
 	height: 40px;
 	padding: 2px;
 	width: 120px;
 }
 
 .criptografar__btn:hover {
-	font-size: 16px;
-	height: 42px;
+	font-size: 18px;
 	width: 122px;
 }
 
 .criptografar__btn:active {
-	font-size: 14px;
+	font-size: 16px;
 	height: 39px;
 	width: 119px;
 }
@@ -107,15 +118,15 @@
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	height: 80%;
-	justify-content: space-evenly;
+	justify-content: space-around;
 }
 
 .descriptografar__input {
-	background: transparent;
-	border-color: #2110be;
+	background: #252424;
 	border-radius: 15px;
-	border: solid 1px;
+	border: solid 1px #504d4d;
+	color: #c2bebe;
+	font-size: 17px;
 	height: 300px;
 	margin-bottom: 2em;
 	margin-top: 3em;
@@ -123,12 +134,11 @@
 }
 
 .descriptografar__input::placeholder {
-	color: #2b2503;
-	font-size: 20px;
-	font-weight: bold;
+	color: #fff;
+	left: 20px;
 	position: absolute;
 	text-align: center;
-	top: 100px;
+	top: 130px;
 }
 
 .descriptografar__btn {
@@ -137,20 +147,19 @@
 	border-radius: 15px;
 	border: 10px;
 	color: #ffffff;
-	font-size: 15px;
+	font-size: 17px;
 	height: 40px;
 	padding: 2px;
 	width: 120px;
 }
 
 .descriptografar__btn:hover {
-	font-size: 16px;
-	height: 42px;
-	width: 122px;
+	font-size: 18px;
+	width: 121px;
 }
 
 .descriptografar__btn:active {
-	font-size: 14px;
+	font-size: 16px;
 	height: 39px;
 	width: 119px;
 }
@@ -159,22 +168,22 @@
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	height: 80%;
-	justify-content: space-evenly;
+	justify-content: space-around;
 }
 
 .resultados_input {
-	background-color: transparent;
+	background-color: #252424;
 	background-image: url("/assets/img/projetoone.png");
-	background-position: 100%;
+	background-position: center;
 	background-repeat: no-repeat;
-	border-color: #2110be;
-	border-radius: 15px;
-	border: solid 1px;
+	border-radius: 17px;
+	border: solid 1px #504d4d;
+	color: #c2bebe;
+	font-size: 17px;
 	height: 300px;
 	margin-bottom: 2em;
 	margin-top: 3em;
-	width: 300px;
+	width: 400px;
 }
 
 .areaDetransferencia {
@@ -186,41 +195,38 @@
 	border-radius: 15px;
 	border: 10px;
 	color: #ffffff;
-	font-size: 15px;
+	font-size: 17px;
 	height: 40px;
 	padding: 2px;
 	width: 80px;
 }
 
 .resultados_btn:hover {
-	font-size: 16px;
-	height: 42px;
+	font-size: 18px;
 	width: 81px;
 }
 
 .resultados_btn:active {
-	font-size: 14px;
+	font-size: 16px;
 	height: 39px;
 	width: 79px;
 }
 
-.campo_erro {
-	position: absolute;
-	top: 38em;
-	font-size: 18px;
-	color: #fd0d41;
-}
-
 footer {
-	background-image: linear-gradient(102.4deg, rgba(253, 189, 85, 1) 7.8%, rgba(249, 131, 255, 1) 100.3%);
-	height: 100px;
+	background: #131722;
+	color: #fff;
 	display: flex;
 	flex-direction: column;
+	height: 150px;
 	justify-content: center;
 	text-align: center;
 	width: 100%;
 }
 
-.desenvolvedor {
-	color: #ff4;
+footer  p {
+	margin-top: 2em;
+}
+
+footer a {
+	color: #fff;
 }

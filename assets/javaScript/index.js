@@ -1,29 +1,40 @@
+let btnCriptografar = document.querySelector(".criptografar__btn");
+
+let iconeDeErro = document.querySelector(".erros__icone");
+
+let btnDescriptografar = document.querySelector(".descriptografar__btn");
+
+let inputDeResultadoDaEncriptacao = document.querySelector(".resultados_input");
+
+let btnAreaDeResultado = document.querySelector(".resultados_btn");
+
+let spanErro = document.querySelector(".erros__descricao");
 
 
+function previnindoEventosDosBtns() {
 
-var btnCriptografar = document.querySelector(".criptografar__btn");
+	btnCriptografar.addEventListener("click", function (event) {
+		event.preventDefault();
+	});
 
-var iconeDeErro = document.querySelector(".iconeInformacao");
+	btnDescriptografar.addEventListener("click", function (event) {
+		event.preventDefault();
+	});
 
-var inputDescriptografar = document.querySelector(".descriptografar__input").value;
-
-var btnDescriptografar = document.querySelector(".descriptografar__btn");
-
-var inputDeResultadoDaEncriptacao =  document.querySelector(".resultados_input");
-
-var btnAreaDeResultado = document.querySelector(".resultados_btn");
-
-var spanErro = document.querySelector(".campo_erro");
+	btnAreaDeResultado.addEventListener("click", function (event) {
+		event.preventDefault();
+	});
+}
+previnindoEventosDosBtns();
 
 
 function verificarSerHaCaracteresEspeciaisNoCampoCriptografar() {
 
-	var inputCriptografar = document.querySelector(".criptografar__input").value;
+	let inputCriptografar = document.querySelector(".criptografar__input").value;
 
-	var regexParaCaracteresEspeciais  = new RegExp("[!@#$%^&*~[_}=.>'+-]");
+	let regexParaCaracteresEspeciais = new RegExp("[!@#$%^&*~[_}=.>'+-]");
 
-	var	resultadoDaRegexParaCaracteresEspeciais = regexParaCaracteresEspeciais.test(inputCriptografar);
-
+	let resultadoDaRegexParaCaracteresEspeciais = regexParaCaracteresEspeciais.test(inputCriptografar);
 
 	return resultadoDaRegexParaCaracteresEspeciais;
 }
@@ -32,11 +43,11 @@ verificarSerHaCaracteresEspeciaisNoCampoCriptografar();
 
 function verificarSerHaNumerosNoCampoCriptografar() {
 
-	var inputCriptografar = document.querySelector(".criptografar__input").value;
+	let inputCriptografar = document.querySelector(".criptografar__input").value;
 
-	var regexParaNumeros  = new RegExp("[0-9]");
+	let regexParaNumeros = new RegExp("[0-9]");
 
-	var	resultadoParaNumeros = regexParaNumeros.test(inputCriptografar);
+	let resultadoParaNumeros = regexParaNumeros.test(inputCriptografar);
 
 	return resultadoParaNumeros;
 }
@@ -44,42 +55,44 @@ verificarSerHaNumerosNoCampoCriptografar();
 
 
 function acoesQueOcorreQuandoClicadoNoBntCriptografar() {
-	
-	btnCriptografar.addEventListener("click", function (event) {
-		event.preventDefault();
-	});
 
-	var inputCriptografar = document.querySelector(".criptografar__input");
+	let inputCriptografar = document.querySelector(".criptografar__input").value;
 
 	inputDeResultadoDaEncriptacao.classList.add("areaDetransferencia");
 
-	var textoCriptografado = logicaDaCriptografar(inputCriptografar.value);
+	let textoCriptografado = criptografarPalavrasDigitadasNoCampoCriptografar(inputCriptografar);
 
 
-	if(verificarSerHaCaracteresEspeciaisNoCampoCriptografar() == true) {
+	if (verificarSerHaCaracteresEspeciaisNoCampoCriptografar() == true) {
 		console.log("erro")
+		iconeDeErro.style.visibility = "visible";
+		spanErro.style.visibility = "visible";
 		iconeDeErro.classList.add("adicionarAnimacao");
 		spanErro.textContent = "Não é permitido caracteres especiais ou números, apenas letras";
 
-	}else if(verificarSerHaNumerosNoCampoCriptografar() == true) {
+	} else if (verificarSerHaNumerosNoCampoCriptografar() == true) {
 		console.log("erro")
+		iconeDeErro.style.visibility = "visible";
+		spanErro.style.visibility = "visible";
 		iconeDeErro.classList.add("adicionarAnimacao");
 		spanErro.textContent = "Não é permitido caracteres especiais ou números, apenas letras";
 
-	}else {
+	} else {
 		console.log("certo")
+		iconeDeErro.style.visibility = "hidden";
+		spanErro.style.visibility = "hidden";
 		iconeDeErro.classList.remove("adicionarAnimacao");
 		inputDeResultadoDaEncriptacao.value = textoCriptografado;
 	}
 }
 
 
-// tem como função ober o que for digitado no campo criptografar e realizar a criptografia do que foi digitado
-function logicaDaCriptografar(textoDigitadoDoCampoCriptografa) {
+// objetivo, ober o que for digitado no campo criptografar e realizar a criptografia do que foi digitado
+function criptografarPalavrasDigitadasNoCampoCriptografar(textoDigitadoDoCampoCriptografa) {
 
-	var inputCriptografar = document.querySelector(".criptografar__input").value;
-	
-	for (var i = 0; i < inputCriptografar.length; i++) {
+	let inputCriptografar = document.querySelector(".criptografar__input").value;
+
+	for (let i = 0; i < inputCriptografar.length; i++) {
 		console.log(i)
 		if (inputCriptografar.includes(textoDigitadoDoCampoCriptografa)) {
 			textoDigitadoDoCampoCriptografa = textoDigitadoDoCampoCriptografa.replace("u", "mxb");
@@ -94,51 +107,78 @@ function logicaDaCriptografar(textoDigitadoDoCampoCriptografa) {
 
 			textoDigitadoDoCampoCriptografa = textoDigitadoDoCampoCriptografa.replaceAll("o", "hus");
 		}
-
 	}
 	return textoDigitadoDoCampoCriptografa
 }
 
-function verificarSerHaCaracteresEspeciaisENumerosNoCampoDescriptografar() {
 
-	var expressaoRegular =	"(?!.*[0-9])(?!.*[ !@#$%^&*~[_}=.>'(+-])";
+function verificarSerHaCaracteresEspeciaisNoCampoDescriptografar() {
 
-	var objetoRegex  = new RegExp( expressaoRegular, 'g');
+	let inputDescriptografar = document.querySelector(".descriptografar__input").value;
 
-	var	resultado = objetoRegex.exec(inputCriptografar);
+	let regexParaCaracteresEspeciais = new RegExp("[!@#$%^&*~[_}=.>'+-]");
 
-	return resultado;
+	let resultadoDaRegexParaCaracteresEspeciais = regexParaCaracteresEspeciais.test(inputDescriptografar);
+
+	return resultadoDaRegexParaCaracteresEspeciais;
 }
+verificarSerHaCaracteresEspeciaisNoCampoDescriptografar();
+
+
+function verificarSerHaNumerosNoCampoDescriptografar() {
+
+	let inputDescriptografar = document.querySelector(".descriptografar__input").value;
+
+	let regexParaNumeros = new RegExp("[0-9]");
+
+	let resultadoParaNumeros = regexParaNumeros.test(inputDescriptografar);
+
+	return resultadoParaNumeros;
+}
+verificarSerHaNumerosNoCampoDescriptografar();
+
 
 function acoesQueOcorreQuandoClicadoNoBntDescriptografar() {
 
-	btnDescriptografar.addEventListener("click", function (event) {
-		event.preventDefault();
-	});
+	let inputDescriptografar = document.querySelector(".descriptografar__input").value;
 
 	inputDeResultadoDaEncriptacao.classList.add("areaDetransferencia");
-	
 
-	var textoDescriptografado = logicaDaDescriptacao(inputDescriptografar);
+	let textoCriptografado = descriptografarPalavrasDigitadasNoCampoDescriptografar(inputDescriptografar);
 
 
-	if(verificarSerHaCaracteresEspeciaisENumerosNoCampoDescriptografar == true) {
-		alert(erro)
+	if (verificarSerHaCaracteresEspeciaisNoCampoDescriptografar() == true) {
+		console.log("erro")
+		iconeDeErro.style.visibility = "visible";
+		spanErro.style.visibility = "visible";
 		iconeDeErro.classList.add("adicionarAnimacao");
-		spanErro.textContent = "Não digite caracteres especiais ou numeros, apenas letras";
+		spanErro.textContent = "Não é permitido caracteres especiais ou números, apenas letras";
 
-	}else {
+	} else if (verificarSerHaNumerosNoCampoDescriptografar() == true) {
+		console.log("erro")
+		iconeDeErro.style.visibility = "visible";
+		spanErro.style.visibility = "visible";
+		iconeDeErro.classList.add("adicionarAnimacao");
+		spanErro.textContent = "Não é permitido caracteres especiais ou números, apenas letras";
 
-		iconeDeErro.remove("adicionarAnimacao")
-		inputDeResultadoDaEncriptacao.textContent = textoDescriptografado;
+	} else {
+		console.log("certo")
+		iconeDeErro.style.visibility = "hidden";
+		spanErro.style.visibility = "hidden";
+		iconeDeErro.classList.remove("adicionarAnimacao");
+		inputDeResultadoDaEncriptacao.value = textoCriptografado;
 	}
 }
 
-// possui uma função de descriptografar o texto que foi digitado para ser criptografado 
-function logicaDaDescriptacao(textoDigitadoDoCampoDescriptografa) {
 
-	for (var i = 0; i < textoDigitadoDoCampoDescriptografa.length; i++) {
-		if (textoDigitadoDoCampoDescriptografa.includes(textoDigitadoDoCampoDescriptografa)) {
+// tem como função ober o que for digitado no campo descriptografar e realizar a descriptografia do que foi digitado
+function  descriptografarPalavrasDigitadasNoCampoDescriptografar(textoDigitadoDoCampoDescriptografa) {
+
+	let inputDescriptografar = document.querySelector(".descriptografar__input").value;
+
+	for (let i = 0; i < inputDescriptografar.length; i++) {
+		console.log(i)
+		if (inputDescriptografar.includes(textoDigitadoDoCampoDescriptografa)) {
 			textoDigitadoDoCampoDescriptografa = textoDigitadoDoCampoDescriptografa.replace("mxb", "u");
 
 			textoDigitadoDoCampoDescriptografa = textoDigitadoDoCampoDescriptografa.replaceAll("gqt", "r");
@@ -151,21 +191,39 @@ function logicaDaDescriptacao(textoDigitadoDoCampoDescriptografa) {
 
 			textoDigitadoDoCampoDescriptografa = textoDigitadoDoCampoDescriptografa.replaceAll("hus", "o");
 		}
+
 	}
-	return textdescrip
+	return textoDigitadoDoCampoDescriptografa
 }
 
-btnAreaDeResultado.addEventListener("click", function (event) {
-	event.preventDefault();
-});
 
 // lógica responsável por enviar para área de transferência do usuário, o que foi criptografado ou descriptografado, quando clicado no botão colar
 document.getElementById("clipboardCopy");
-async function colar() {
+async function copiarParaAreaDeTransferencia() {
 	let text = document.querySelector(".resultados_input").value;
 	await navigator.clipboard.writeText(text);
-	alert("o conteúdo foi copiado para sua área de transferência");
+	popupSucessoAoColar();
 }
+
+
+function popupSucessoAoColar() {
+	let popup = document.querySelector(".popup__copiar");
+	popup.classList.add("popup_animacao")
+	popup.style.visibility = "visible";
+}
+
+
+function fecharPopupCopiar() {
+
+	let xParaFecharPopup = document.querySelector(".copiar__fechar");
+
+	xParaFecharPopup.addEventListener("click", function () {
+		let popupCopiar = document.querySelector(".popup__copiar");
+		popupCopiar.style.visibility = "hidden";
+	});
+}
+fecharPopupCopiar();
+
 
 
 

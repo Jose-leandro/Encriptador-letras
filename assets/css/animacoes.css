@@ -1,85 +1,39 @@
+@keyframes mostraPopup {
+    0% {
+        visibility: hidden;
+    }
 
-/**
- ----------------------------------------
- See http://animista.net/license for more info. 
- w: http://animista.net, t: @cssanimista
- animation wobble-hor-bottom
- ----------------------------------------
- */
+    25% {
+        visibility: visible;
+    }
 
-@-webkit-keyframes oscilarOMeuInconeInformacoes {
-
-    0%,
     100% {
-        -webkit-transform-origin: 50% 50%;
-        -webkit-transform: translateX(0%);
-        transform-origin: 50% 50%;
-        transform: translateX(0%);
-    }
-
-    15% {
-        -webkit-transform: translateX(-30px) rotate(-6deg);
-        transform: translateX(-30px) rotate(-6deg);
-    }
-
-    30% {
-        -webkit-transform: translateX(15px) rotate(6deg);
-        transform: translateX(15px) rotate(6deg);
-    }
-
-    45% {
-        -webkit-transform: translateX(-15px) rotate(-3.6deg);
-        transform: translateX(-15px) rotate(-3.6deg);
-    }
-
-    60% {
-        -webkit-transform: translateX(9px) rotate(2.4deg);
-        transform: translateX(9px) rotate(2.4deg);
-    }
-
-    75% {
-        -webkit-transform: translateX(-6px) rotate(-1.2deg);
-        transform: translateX(-6px) rotate(-1.2deg);
+        transform: translateX(-150px);
     }
 }
 
-@keyframes oscilarOMeuInconeInformacoes {
+.popup__animacao {
+    animation: mostraPopup ease-in-out 2s;
+}
 
-    0%,
-    100% {
-        -webkit-transform-origin: 50% 50%;
-        -webkit-transform: translateX(0%);
-        transform-origin: 50% 50%;
-        transform: translateX(0%);
+@keyframes oscilarOMeuInconeInformações {
+    0% {
+        transform: translateX(2px) rotate(2deg);
     }
 
-    15% {
-        -webkit-transform: translateX(-30px) rotate(-6deg);
-        transform: translateX(-30px) rotate(-6deg);
-    }
-
-    30% {
-        -webkit-transform: translateX(15px) rotate(6deg);
-        transform: translateX(15px) rotate(6deg);
-    }
-
-    45% {
-        -webkit-transform: translateX(-15px) rotate(-3.6deg);
-        transform: translateX(-15px) rotate(-3.6deg);
-    }
-
-    60% {
-        -webkit-transform: translateX(9px) rotate(2.4deg);
-        transform: translateX(9px) rotate(2.4deg);
+    25% {
+        transform: translateX(-10px) rotate(-8deg);
     }
 
     75% {
-        -webkit-transform: translateX(-6px) rotate(-1.2deg);
-        transform: translateX(-6px) rotate(-1.2deg);
+        transform: translateX(5px) rotate(8deg);
+    }
+
+    100% {
+        transform: translateX(-2px) rotate(-2deg);
     }
 }
 
 .adicionarAnimacao {
-    -webkit-animation: oscilarOMeuInconeInformacoes infinite 2s both;
-    animation: oscilarOMeuInconeInformacoes infinite 2s both;
+    animation: oscilarOMeuInconeInformações infinite ease-in-out 2s;
 }

@@ -1,23 +1,166 @@
-@media screen and (max-width: 700px) {
-    .main__campo {
-        height: 2000px;
+@media screen and (max-width: 780px) {
+    .criptografar__input::placeholder {
+        font-size: 15px;
+        left: 40px;
+    }
+
+    .descriptografar__input::placeholder {
+        font-size: 15px;
+        left: 28px;
+    }
+
+    .header__titulo p {
+        font-size: 70px;
+    }
+
+    .header__titulo p:hover {
+        font-size: 71px;
+    }
+
+    main {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        height: 100%;
     }
 
-
-    .iconeInformacao {
-        left: 4em;
-        position: absolute;
-        top: 30em;
+    .erros__icone {
+        position: fixed;
     }
 
-        
-    .campo_erro {
-        position: absolute;
-        top: 27em;
+    .erros__descricao {
+        position: fixed;
+    }
+
+    .campo__criptografar {
+        margin-top: 4em;
+    }
+
+    .criptografar__input {
+        width: 300px;
+    }
+
+    .descriptografar__input {
+        width: 300px;
+    }
+
+    .resultados_input {
+        width: 300px;
+    }
+}
+
+@media screen and (min-width: 780px) {
+    .criptografar__input::placeholder {
         font-size: 18px;
-        color: #fd0d41;
+        left: 65px;
+    }
+
+    .descriptografar__input::placeholder {
+        font-size: 18px;
+        left: 53px;
+    }
+
+    .header__titulo p {
+        font-size: 81px;
+    }
+
+    .header__titulo p:hover {
+        font-size: 82px;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .campo__criptografar {
+        margin-top: 4em;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .criptografar__input::placeholder {
+        font-size: 18px;
+        left: 65px;
+    }
+
+    .descriptografar__input::placeholder {
+        font-size: 18px;
+        left: 53px;
+    }
+
+    .header__titulo p {
+        font-size: 81px;
+    }
+
+    .header__titulo p:hover {
+        font-size: 82px;
+    }
+
+    .campo__criptografar {
+        margin-top: 4em;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .criptografar__input::placeholder {
+        font-size: 18px;
+        left: 65px;
+    }
+
+    .descriptografar__input::placeholder {
+        font-size: 18px;
+        left: 53px;
+    }
+
+    .header__titulo p {
+        font-size: 81px;
+    }
+
+    .header__titulo p:hover {
+        font-size: 82px;
+    }
+
+    .main__campo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .campo__criptografar {
+        margin-top: 4em;
+    }
+}
+
+@media screen and (min-width: 1301px) {
+
+    .header__titulo p {
+        font-size: 81px;
+    }
+
+    .header__titulo p:hover {
+        font-size: 82px;
+    }
+
+    .main__campo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        text-align: end;
+    }
+
+    .criptografar__input::placeholder {
+        font-size: 18px;
+        font-weight: bold;
+        left: 65px;
+    }
+
+    .campo__criptografar {
+        margin-top: 0;
+    }
+
+    .descriptografar__input::placeholder {
+        font-size: 18px;
+        font-weight: bold;
+        left: 53px;
     }
 }
