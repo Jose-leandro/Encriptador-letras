@@ -86,7 +86,6 @@ function acoesQueOcorreQuandoClicadoNoBntCriptografar() {
 	}
 }
 
-
 // objetivo, ober o que for digitado no campo criptografar e realizar a criptografia do que foi digitado
 function criptografarPalavrasDigitadasNoCampoCriptografar(textoDigitadoDoCampoCriptografa) {
 
@@ -110,7 +109,6 @@ function criptografarPalavrasDigitadasNoCampoCriptografar(textoDigitadoDoCampoCr
 	}
 	return textoDigitadoDoCampoCriptografa
 }
-
 
 function verificarSerHaCaracteresEspeciaisNoCampoDescriptografar() {
 
@@ -172,7 +170,7 @@ function acoesQueOcorreQuandoClicadoNoBntDescriptografar() {
 
 
 // tem como função ober o que for digitado no campo descriptografar e realizar a descriptografia do que foi digitado
-function  descriptografarPalavrasDigitadasNoCampoDescriptografar(textoDigitadoDoCampoDescriptografa) {
+function descriptografarPalavrasDigitadasNoCampoDescriptografar(textoDigitadoDoCampoDescriptografa) {
 
 	let inputDescriptografar = document.querySelector(".descriptografar__input").value;
 
